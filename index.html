@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="estilos.css">
+	<title>Funcions</title>	
+</head>
+<body>
+	<button onclick="myFunction()">comença</button>
+
+	<p id="demo"></p>
+
+	<script>
+	
+  function myFunction() {
+	var parules=new Set();	
+	var paraula;
+	var  totesParaules=" ";
+   paraula="--";
+	//console.log ("paraula: ",paraula)
+  while (paraula != null ) {
+	 
+	paraula = prompt("Posa una parula");
+	parules.add(paraula);
+	if (paraula==""){
+		paraula=null;
+		parules.delete("null");
+	}
+   
+  }
+  
+	for (paraula of parules){
+		console.log(paraula);
+	
+		totesParaules+=" "+ paraula;
+		
+  }
+  document.getElementById("demo").innerHTML =totesParaules;
+
+}
+//document.getElementById("demo").innerHTML =totesParaules;
+
+
+	</script>
+
+</body>
+</html>
