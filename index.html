@@ -13,7 +13,7 @@
 	<script>
 	
   function myFunction() {
-	var parules=new Set();	
+	var paraules=new Map();	
 	var paraula;
 	var  totesParaules=" ";
    paraula="--";
@@ -21,15 +21,17 @@
   while (paraula != null ) {
 	 
 	paraula = prompt("Posa una parula");
-	parules.add(paraula);
+	paraules.set(paraula);
 	if (paraula==""){
 		paraula=null;
 		
 	}
 	
   }
-  parules.delete(null);
-	for (paraula of parules){
+  paraules.delete(null);
+ var paraulesOrd =new Map([...paraules.entries()].sort());
+ 
+	for (paraula of paraulesOrd){
 		console.log(paraula);
 	
 		totesParaules+=" "+ paraula;
