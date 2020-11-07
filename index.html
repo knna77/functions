@@ -6,13 +6,10 @@
 	<title>Funcions</title>	
 </head>
 <body>
-	<button onclick="myFunction()">comença</button>
-
 	<p id="demo"></p>
-
 	<script>
-	
-  function myFunction() {
+ document.getElementById("demo").innerHTML =paraulesEscrites();
+  function paraulesEscrites() {
 	var paraules=new Map();	
 	var paraules2;
 	var paraula;
@@ -37,14 +34,12 @@
 	for (paraula of paraulesRev){
 		console.log(paraula);
 	
-		totesParaules+=" "+ paraula;
+		totesParaules+=paraula;
 		
   }
-  document.getElementById("demo").innerHTML =totesParaules;
+ return totesParaules;
 
 }
-//document.getElementById("demo").innerHTML =totesParaules;
-
 
 	</script>
 
