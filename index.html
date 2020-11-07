@@ -14,6 +14,7 @@
 	
   function myFunction() {
 	var paraules=new Map();	
+	var paraules2;
 	var paraula;
 	var  totesParaules=" ";
    paraula="--";
@@ -29,9 +30,11 @@
 	
   }
   paraules.delete(null);
+
  var paraulesOrd =new Map([...paraules.entries()].sort());
+  var paraulesRev=new Map([...paraulesOrd].reverse());
  
-	for (paraula of paraulesOrd){
+	for (paraula of paraulesRev){
 		console.log(paraula);
 	
 		totesParaules+=" "+ paraula;
