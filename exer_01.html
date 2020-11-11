@@ -2,41 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="estilos.css">
-	<title>Funcions</title>	
+	<script type="text/javascript" src="js/01ex.js"></script>
+	<title>Funcions1</title>	
 </head>
 <body>
-	
-	<script>
- paraulesEscrites();
-  function paraulesEscrites() {
-	var paraules=new Map();	
-	
-
-	var paraula="--";
-	//console.log ("paraula: ",paraula)
-  while (paraula != null && paraula!="") {
-	 
-	paraula = prompt("Posa una parula");
-	paraules.set(paraula);
-		
-  }
-  paraules.delete("");
-
- var paraulesOrd =new Map([...paraules.entries()].sort());
-  var paraulesRev=new Map([...paraulesOrd].reverse());
-  
-	for  (let[clave,valor]of paraulesRev){
-	     document.write(clave+"<br>");
-		console.log(clave);
-		
-  }
- 
-
-}
-
-
-	</script>
-
 </body>
 </html>
