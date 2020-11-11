@@ -6,40 +6,35 @@
 	<title>Funcions</title>	
 </head>
 <body>
-	<p id="demo"></p>
+	
 	<script>
- document.getElementById("demo").innerHTML =paraulesEscrites();
+ paraulesEscrites();
   function paraulesEscrites() {
 	var paraules=new Map();	
-	var paraules2;
-	var paraula;
-	var  totesParaules=" ";
-   paraula="--";
+	
+
+	var paraula="--";
 	//console.log ("paraula: ",paraula)
-  while (paraula != null ) {
+  while (paraula != null && paraula!="") {
 	 
 	paraula = prompt("Posa una parula");
 	paraules.set(paraula);
-	if (paraula==""){
-		paraula=null;
 		
-	}
-	
   }
-  paraules.delete(null);
+  paraules.delete("");
 
  var paraulesOrd =new Map([...paraules.entries()].sort());
   var paraulesRev=new Map([...paraulesOrd].reverse());
- 
-	for (paraula of paraulesRev){
-		console.log(paraula);
-	
-		totesParaules+=paraula;
+  
+	for  (let[clave,valor]of paraulesRev){
+	     document.write(clave+"<br>");
+		console.log(clave);
 		
   }
- return totesParaules;
+ 
 
 }
+
 
 	</script>
 
