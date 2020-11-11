@@ -9,7 +9,7 @@
 	
 	<script>
 		var coses=["cadira","taula","got"];
- filtro(coses,callback);
+ filtro(coses,factorialRecur);
   function filtro(array,funcion) {
 	  count=0;
 for (var element of array){
@@ -22,10 +22,12 @@ for (var element of array){
 }
 	document.write(coses.toString());	
   }
-  function callback(x){
-   z=x.toUpperCase()
-   return z;
-  }
+  function factorialRecur (n) { 
+	if (n == 0){ 
+		return 1; 
+	}
+	return n * factorialRecur(n-1); 
+}
  
 
 
